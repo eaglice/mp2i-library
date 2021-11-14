@@ -1,3 +1,4 @@
+(** [recherche_dicho t x] tell if x is in [t] by using dichotomie without using a recursive function *)
 let recherche_dicho t x = 
     let e = Array.length t -1 in 
     let (a,b) = ( 0,  e) in
@@ -10,7 +11,7 @@ let recherche_dicho t x =
                     f := m; 
             done;
             t.(!d) = x;;
-
+(** [dicho_rec t x] tell if x is in [t] by using dichotomie with  a recursive function *)
 let dicho_rec t x =
     let rec aux i j =
     if i > j then false
@@ -20,6 +21,7 @@ let dicho_rec t x =
         else aux i (m- 1)
     in aux 0 (Array.length t - 1)
 
+(** [tricho_rec t x] tell if x is in [t] by using trichotomie with  a recursive function *)
 let tricho_rec t x =
     let rec aux i j =
         if i > j then false
