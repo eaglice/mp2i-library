@@ -1,1 +1,7 @@
+(* This file contains searching algorithms *)
 
+(** [swap t i j] exchanges [t.(i)] and [t.(j)] *)
+let swap t i j =
+  let tmp = t.(i) in
+  t.(i) <- t.(j);
+  t.(j) <- tmp;;
