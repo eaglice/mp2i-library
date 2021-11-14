@@ -39,8 +39,4 @@ let rec tri = function
     |e::q -> let l1 ,l2 = partition q p in
         if e < p then e::l1, l2
         else l1, e::l2;;
-  (** [tri_rapide l] use partition to create two sorted list from l with each element of (l1) < each element of (l2) then concatenate then to  sort l *)
-  let rec tri_rapide = function
-    |[] -> []
-    | p::q -> let l1, l2 = partition q p in 
-            (tri_rapide l1)@(tri_rapide l2)
+ 
