@@ -6,7 +6,8 @@ let creer h w = {hache= h ;donnees = Array.make w []; largeur = w};;
 
 (**[recherche t k] tell if there is a key k in t*)
 let recherche t k = 
-    List.exists(fun c -> fst c = k) t.donnees.(t.hache k)
+    List.exists(fun c -> fst c = k) t.donnees.(t.hache k);;
+    
 (**[element t k] take an Array k of elements and return l an Array of every element associated by t, if there is no element associated to k.(i), l.(i) take the value of []*)
 let elements t k =
     let l = Array.make(Array.length k) [] in
@@ -15,9 +16,10 @@ let elements t k =
         else l.(i) <- []
     done;
     l;;
+    
 (**[ajout t k e] add the element e with the key k in t*)
 let ajout t k e =
-    t.donnees.(t.hache k) <- (k,e)::t.donnees.(t.hache k)
+    t.donnees.(t.hache k) <- (k,e)::t.donnees.(t.hache k);;
 
 
 
